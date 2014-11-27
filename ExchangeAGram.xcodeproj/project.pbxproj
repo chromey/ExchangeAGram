@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */; };
 		83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */; };
-		83CEAF201A27DCFD00785281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1F1A27DCFD00785281 /* ViewController.swift */; };
 		83CEAF231A27DCFD00785281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CEAF211A27DCFD00785281 /* Main.storyboard */; };
 		83CEAF251A27DCFD00785281 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83CEAF241A27DCFD00785281 /* Images.xcassets */; };
 		83CEAF281A27DCFD00785281 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83CEAF261A27DCFD00785281 /* LaunchScreen.xib */; };
 		83CEAF341A27DCFD00785281 /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF331A27DCFD00785281 /* ExchangeAGramTests.swift */; };
+		83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */; };
+		83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3F1A27E56E00785281 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,14 @@
 		83CEAF191A27DCFD00785281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83CEAF1D1A27DCFD00785281 /* ExchangeAGram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExchangeAGram.xcdatamodel; sourceTree = "<group>"; };
-		83CEAF1F1A27DCFD00785281 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		83CEAF221A27DCFD00785281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83CEAF241A27DCFD00785281 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83CEAF271A27DCFD00785281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		83CEAF2D1A27DCFD00785281 /* ExchangeAGramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeAGramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CEAF321A27DCFD00785281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CEAF331A27DCFD00785281 /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
+		83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
+		83CEAF3F1A27E56E00785281 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */,
-				83CEAF1F1A27DCFD00785281 /* ViewController.swift */,
+				83CEAF3F1A27E56E00785281 /* FeedCell.swift */,
+				83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */,
 				83CEAF211A27DCFD00785281 /* Main.storyboard */,
 				83CEAF241A27DCFD00785281 /* Images.xcassets */,
 				83CEAF261A27DCFD00785281 /* LaunchScreen.xib */,
@@ -215,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CEAF201A27DCFD00785281 /* ViewController.swift in Sources */,
 				83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */,
+				83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */,
+				83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */,
 				83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
