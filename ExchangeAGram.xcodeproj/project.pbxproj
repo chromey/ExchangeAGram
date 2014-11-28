@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		839449CA1A293B61002F09FD /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839449C91A293B61002F09FD /* FeedItem.swift */; };
 		83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */; };
 		83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */; };
 		83CEAF231A27DCFD00785281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CEAF211A27DCFD00785281 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		839449C91A293B61002F09FD /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		83CEAF151A27DCFD00785281 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CEAF191A27DCFD00785281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				83CEAF241A27DCFD00785281 /* Images.xcassets */,
 				83CEAF261A27DCFD00785281 /* LaunchScreen.xib */,
 				83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */,
+				839449C91A293B61002F09FD /* FeedItem.swift */,
 				83CEAF181A27DCFD00785281 /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -221,6 +224,7 @@
 				83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */,
 				83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */,
 				83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */,
+				839449CA1A293B61002F09FD /* FeedItem.swift in Sources */,
 				83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +419,7 @@
 				83CEAF391A27DCFD00785281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83CEAF3A1A27DCFD00785281 /* Build configuration list for PBXNativeTarget "ExchangeAGramTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				83CEAF3C1A27DCFD00785281 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
