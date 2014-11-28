@@ -58,5 +58,11 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("feedCell", forIndexPath: indexPath) as FeedCell
         return cell
     }
+    
+    // UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as UIImage
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
