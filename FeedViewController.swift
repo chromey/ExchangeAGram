@@ -59,11 +59,16 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return feedArray.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("feedCell", forIndexPath: indexPath) as FeedCell
+        if indexPath.section == 0 {
+            let feedItem = feedArray[indexPath.item] as FeedItem
+            cell.imageView.image = UIImage(data: feedItem.image)
+            cell.captionLabel.text = feedItem.caption
+        }
         return cell
     }
     
@@ -79,8 +84,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedItem.caption = "my caption"
         
         appDelegate.saveContext()
+        feedArray.append(feedItem)
     
         self.dismissViewControllerAnimated(true, completion: nil)
+        collectionView.reloadData()
     }
 
 }
