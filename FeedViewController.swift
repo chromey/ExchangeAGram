@@ -76,6 +76,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let feedItem = feedArray[indexPath.item] as FeedItem
+        let filterVc = FilterViewController()
+        filterVc.feedItem = feedItem
+        self.navigationController?.pushViewController(filterVc, animated: false)
+        
     }
     
     // UIImagePickerControllerDelegate
