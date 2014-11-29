@@ -72,6 +72,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
+    // UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let feedItem = feedArray[indexPath.item] as FeedItem
+    }
+    
     // UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
