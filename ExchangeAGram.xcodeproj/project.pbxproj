@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8386DEBF1A2A504100AEC39F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386DEBE1A2A504100AEC39F /* FilterViewController.swift */; };
 		8386DEC11A2A8BEF00AEC39F /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */; };
-		839449CA1A293B61002F09FD /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839449C91A293B61002F09FD /* FeedItem.swift */; };
 		83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */; };
 		83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */; };
 		83CEAF231A27DCFD00785281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CEAF211A27DCFD00785281 /* Main.storyboard */; };
@@ -18,6 +17,7 @@
 		83CEAF341A27DCFD00785281 /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF331A27DCFD00785281 /* ExchangeAGramTests.swift */; };
 		83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */; };
 		83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3F1A27E56E00785281 /* FeedCell.swift */; };
+		83E43D091A2BAA5000F784B3 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E43D081A2BAA5000F784B3 /* FeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,6 @@
 /* Begin PBXFileReference section */
 		8386DEBE1A2A504100AEC39F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
-		839449C91A293B61002F09FD /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		83CEAF151A27DCFD00785281 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83CEAF191A27DCFD00785281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		83CEAF331A27DCFD00785281 /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
 		83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 		83CEAF3F1A27E56E00785281 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		83E43D081A2BAA5000F784B3 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +87,7 @@
 		83CEAF171A27DCFD00785281 /* ExchangeAGram */ = {
 			isa = PBXGroup;
 			children = (
+				83E43D0A1A2BAAD100F784B3 /* Model */,
 				83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */,
 				83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */,
 				83CEAF3F1A27E56E00785281 /* FeedCell.swift */,
@@ -96,7 +97,6 @@
 				83CEAF241A27DCFD00785281 /* Images.xcassets */,
 				83CEAF261A27DCFD00785281 /* LaunchScreen.xib */,
 				83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */,
-				839449C91A293B61002F09FD /* FeedItem.swift */,
 				83CEAF181A27DCFD00785281 /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -125,6 +125,14 @@
 				83CEAF321A27DCFD00785281 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83E43D0A1A2BAAD100F784B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83E43D081A2BAA5000F784B3 /* FeedItem.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +240,7 @@
 				83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */,
 				83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */,
 				83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */,
-				839449CA1A293B61002F09FD /* FeedItem.swift in Sources */,
+				83E43D091A2BAA5000F784B3 /* FeedItem.swift in Sources */,
 				83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
