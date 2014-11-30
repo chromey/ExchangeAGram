@@ -14,6 +14,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     var collectionView: UICollectionView!
     let kIntensity = 0.7
     var context: CIContext = CIContext(options: nil)
+    var filters: [CIFilter] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         collectionView.registerClass(FilterCell.self, forCellWithReuseIdentifier: "filterCell")
         self.view.addSubview(collectionView)
         
+        filters = photoFilters()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,12 +45,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     // UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return filters.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("filterCell", forIndexPath: indexPath) as FilterCell
-        cell.imageView.image = UIImage(named: "Placeholder")
+        // cell.imageView.image = UIImage(named: "PlaceHolder")
+        cell.imageView.image = filteredImage(fromImage: feedItem.image, filter: filters[indexPath.item])
         return cell
     }
     
