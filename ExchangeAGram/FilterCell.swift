@@ -13,8 +13,7 @@ class FilterCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        imageView = UIImageView(frame: frame)
-        // imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
         contentView.addSubview(imageView)
     }
 

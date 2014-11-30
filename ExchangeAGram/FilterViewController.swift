@@ -45,13 +45,21 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     // UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filters.count
+        return 4
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("filterCell", forIndexPath: indexPath) as FilterCell
-        // cell.imageView.image = UIImage(named: "PlaceHolder")
-        cell.imageView.image = filteredImage(fromImage: feedItem.image, filter: filters[indexPath.item])
+        cell.imageView.image = UIImage(named: "Placeholder")
+        
+//        let filterQueue: dispatch_queue_t = dispatch_queue_create("filter queue", nil)
+//        dispatch_async(filterQueue, { () -> Void in
+//            let filterImage = self.filteredImage(fromImage: self.feedItem.image, filter: self.filters[indexPath.item])
+//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                cell.imageView.image = filterImage
+//            })
+//        })
+
         return cell
     }
     
