@@ -15,6 +15,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     let kIntensity = 0.7
     var context: CIContext = CIContext(options: nil)
     var filters: [CIFilter] = []
+    let placeHolderImage = UIImage(named: "Placeholder")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,16 +51,17 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("filterCell", forIndexPath: indexPath) as FilterCell
-        cell.imageView.image = UIImage(named: "Placeholder")
-        
-        let filterQueue: dispatch_queue_t = dispatch_queue_create("filter queue", nil)
-        dispatch_async(filterQueue, { () -> Void in
-            let filterImage = self.filteredImage(fromImage: self.feedItem.thumbNail, filter: self.filters[indexPath.item])
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                cell.imageView.image = filterImage
+        if cell.imageView.image == nil {
+            cell.imageView.image = placeHolderImage
+            
+            let filterQueue: dispatch_queue_t = dispatch_queue_create("filter queue", nil)
+            dispatch_async(filterQueue, { () -> Void in
+                let filterImage = self.filteredImage(fromImage: self.feedItem.thumbNail, filter: self.filters[indexPath.item])
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    cell.imageView.image = filterImage
+                })
             })
-        })
-
+        }
         return cell
     }
     
