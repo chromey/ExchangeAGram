@@ -52,17 +52,15 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("filterCell", forIndexPath: indexPath) as FilterCell
-        if cell.imageView.image == nil {
-            cell.imageView.image = placeHolderImage
-            
-            let filterQueue: dispatch_queue_t = dispatch_queue_create("filter queue", nil)
-            dispatch_async(filterQueue, { () -> Void in
-                let filterImage = self.filteredImage(fromImage: self.feedItem.thumbNail, filter: self.filters[indexPath.item])
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    cell.imageView.image = filterImage
-                })
+        cell.imageView.image = placeHolderImage
+        
+        let filterQueue: dispatch_queue_t = dispatch_queue_create("filter queue", nil)
+        dispatch_async(filterQueue, { () -> Void in
+            let filterImage = self.getCachedImage(indexPath.item)
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                cell.imageView.image = filterImage
             })
-        }
+        })
         return cell
     }
     
@@ -120,6 +118,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         let image = filteredImage(fromImage: self.feedItem.thumbNail, filter: self.filters[imageNumber])
         UIImageJPEGRepresentation(image, 1.0).writeToFile(uniquePath, atomically: true)
+        (UIApplication.sharedApplication().delegate as AppDelegate).cacheStatistics("Image \(imageNumber) added")
     }
     
     func getCachedImage(imageNumber: Int) -> UIImage {

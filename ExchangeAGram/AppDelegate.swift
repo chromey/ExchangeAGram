@@ -21,7 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let cache = NSURLCache(memoryCapacity: 8 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024, diskPath: nil)
         NSURLCache.setSharedURLCache(cache)
         
+        cacheStatistics("initial")
         return true
+    }
+    
+    func cacheStatistics(phase: String) {
+        println("\(phase)")
+        println("   memoryCapacity: \(NSURLCache.sharedURLCache().memoryCapacity)")
+        println("   currentMemoryUsage: \(NSURLCache.sharedURLCache().currentMemoryUsage)")
+        println("   currentDiskUsage: \(NSURLCache.sharedURLCache().currentDiskUsage)")
     }
     
     func applicationDidReceiveMemoryWarning(application: UIApplication) {
