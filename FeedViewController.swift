@@ -26,6 +26,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let request = NSFetchRequest(entityName: "FeedItem")
         feedArray = managedObjectContext!.executeFetchRequest(request, error: nil)!
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        let request = NSFetchRequest(entityName: "FeedItem")
+        feedArray = managedObjectContext!.executeFetchRequest(request, error: nil)!
+        collectionView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
