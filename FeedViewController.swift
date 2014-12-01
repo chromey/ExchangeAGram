@@ -58,6 +58,10 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
     }
 
+    @IBAction func profileButtonTapped(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("profileSegue", sender: self)
+    }
+    
     // UICollectionViewDataSource
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

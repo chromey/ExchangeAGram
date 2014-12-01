@@ -18,6 +18,7 @@
 		83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */; };
 		83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3F1A27E56E00785281 /* FeedCell.swift */; };
 		83E43D091A2BAA5000F784B3 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E43D081A2BAA5000F784B3 /* FeedItem.swift */; };
+		83E43D0C1A2D31F300F784B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 		83CEAF3F1A27E56E00785281 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		83E43D081A2BAA5000F784B3 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
+		83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				8386DEBE1A2A504100AEC39F /* FilterViewController.swift */,
 				8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */,
 				83CEAF211A27DCFD00785281 /* Main.storyboard */,
+				83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */,
 				83CEAF241A27DCFD00785281 /* Images.xcassets */,
 				83CEAF261A27DCFD00785281 /* LaunchScreen.xib */,
 				83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */,
@@ -241,6 +244,7 @@
 				83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */,
 				83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */,
 				83E43D091A2BAA5000F784B3 /* FeedItem.swift in Sources */,
+				83E43D0C1A2D31F300F784B3 /* ProfileViewController.swift in Sources */,
 				83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
