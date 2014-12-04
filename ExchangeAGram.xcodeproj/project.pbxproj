@@ -34,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		831A91901A30F787000F104A /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../../Documents/FacebookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		831A91921A30FB07000F104A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		8386DEBE1A2A504100AEC39F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		83CEAF151A27DCFD00785281 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +93,7 @@
 		83CEAF171A27DCFD00785281 /* ExchangeAGram */ = {
 			isa = PBXGroup;
 			children = (
+				831A91921A30FB07000F104A /* BridgingHeader.h */,
 				83E43D0A1A2BAAD100F784B3 /* Model */,
 				83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */,
 				83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */,
@@ -381,6 +383,7 @@
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ExchangeAGram/BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -395,6 +398,7 @@
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ExchangeAGram/BridgingHeader.h;
 			};
 			name = Release;
 		};
