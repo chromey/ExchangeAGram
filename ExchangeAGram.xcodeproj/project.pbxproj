@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831A91911A30F787000F104A /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831A91901A30F787000F104A /* FBAudienceNetwork.framework */; };
 		8386DEBF1A2A504100AEC39F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386DEBE1A2A504100AEC39F /* FilterViewController.swift */; };
 		8386DEC11A2A8BEF00AEC39F /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */; };
 		83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF1A1A27DCFD00785281 /* AppDelegate.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831A91901A30F787000F104A /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ../../../Documents/FacebookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		8386DEBE1A2A504100AEC39F /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		83CEAF151A27DCFD00785281 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831A91911A30F787000F104A /* FBAudienceNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +111,7 @@
 		83CEAF181A27DCFD00785281 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				831A91901A30F787000F104A /* FBAudienceNetwork.framework */,
 				83CEAF191A27DCFD00785281 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -370,6 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chris/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,6 +388,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/chris/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
