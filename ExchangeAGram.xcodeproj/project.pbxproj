@@ -18,6 +18,7 @@
 		83CEAF341A27DCFD00785281 /* ExchangeAGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF331A27DCFD00785281 /* ExchangeAGramTests.swift */; };
 		83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */; };
 		83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3F1A27E56E00785281 /* FeedCell.swift */; };
+		83DB4C221A311EC800B22072 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DB4C211A311EC800B22072 /* FacebookSDK.framework */; };
 		83E43D091A2BAA5000F784B3 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E43D081A2BAA5000F784B3 /* FeedItem.swift */; };
 		83E43D0C1A2D31F300F784B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		83CEAF331A27DCFD00785281 /* ExchangeAGramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeAGramTests.swift; sourceTree = "<group>"; };
 		83CEAF3D1A27E1BB00785281 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 		83CEAF3F1A27E56E00785281 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		83DB4C211A311EC800B22072 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		83E43D081A2BAA5000F784B3 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
 		83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				831A91911A30F787000F104A /* FBAudienceNetwork.framework in Frameworks */,
+				83DB4C221A311EC800B22072 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +116,7 @@
 		83CEAF181A27DCFD00785281 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83DB4C211A311EC800B22072 /* FacebookSDK.framework */,
 				831A91901A30F787000F104A /* FBAudienceNetwork.framework */,
 				83CEAF191A27DCFD00785281 /* Info.plist */,
 			);
