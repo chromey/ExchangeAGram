@@ -67,14 +67,15 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     // UICollectionViewDelegate
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let filteredImage = self.filteredImage(fromImage: feedItem.image, filter: filters[indexPath.row])
-        let imageData = UIImageJPEGRepresentation(filteredImage, 1.0)
-        self.feedItem.image = imageData
-        let thumbNailData = UIImageJPEGRepresentation(filteredImage, 0.1)
-        self.feedItem.thumbNail = thumbNailData
-        
-        (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
-        self.navigationController?.popViewControllerAnimated(true)
+        createUIAlertController()
+//        let filteredImage = self.filteredImage(fromImage: feedItem.image, filter: filters[indexPath.row])
+//        let imageData = UIImageJPEGRepresentation(filteredImage, 1.0)
+//        self.feedItem.image = imageData
+//        let thumbNailData = UIImageJPEGRepresentation(filteredImage, 0.1)
+//        self.feedItem.thumbNail = thumbNailData
+//        
+//        (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
+//        self.navigationController?.popViewControllerAnimated(true)
     }
     
     // helper function
@@ -122,6 +123,17 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         let cgImage = context.createCGImage(filteredImage, fromRect: extent)
         
         return UIImage(CGImage: cgImage)!
+    }
+    
+    // UIAlertController helper functions
+    
+    func createUIAlertController() {
+        let alert = UIAlertController(title: "Photo Options", message: "Please choose an option", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Add Caption!"
+            textField.secureTextEntry = false
+        }
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     // caching functions
