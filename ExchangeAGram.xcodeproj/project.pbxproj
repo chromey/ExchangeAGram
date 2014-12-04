@@ -100,11 +100,11 @@
 				83CEAF3F1A27E56E00785281 /* FeedCell.swift */,
 				8386DEBE1A2A504100AEC39F /* FilterViewController.swift */,
 				8386DEC01A2A8BEF00AEC39F /* FilterCell.swift */,
-				83CEAF211A27DCFD00785281 /* Main.storyboard */,
 				83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */,
 				83CEAF241A27DCFD00785281 /* Images.xcassets */,
 				83CEAF261A27DCFD00785281 /* LaunchScreen.xib */,
 				83CEAF1C1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld */,
+				83CEAF211A27DCFD00785281 /* Main.storyboard */,
 				83CEAF181A27DCFD00785281 /* Supporting Files */,
 			);
 			path = ExchangeAGram;
