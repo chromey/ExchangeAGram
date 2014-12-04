@@ -100,10 +100,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-8l-RiG" customClass="FBLoginView">
+                                <rect key="frame" x="50" y="400" width="200" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="fbLoginView" destination="EMj-8l-RiG" id="ujo-15-b5O"/>
                         <outlet property="nameLabel" destination="WPi-AP-rig" id="0Yb-hK-oxF"/>
                         <outlet property="profileImageView" destination="jkf-K0-NwZ" id="nIy-7U-gN7"/>
                     </connections>
