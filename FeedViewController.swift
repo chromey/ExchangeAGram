@@ -11,13 +11,15 @@ import MobileCoreServices
 import CoreData
 import MapKit
 
-class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
     let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
     
     var feedArray: [AnyObject] = []
+    
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let request = NSFetchRequest(entityName: "FeedItem")
         feedArray = managedObjectContext!.executeFetchRequest(request, error: nil)!
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 100.0
+        locationManager.startUpdatingLocation()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -113,4 +121,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.reloadData()
     }
 
+    // CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        println("lcoations = \(locations)")
+    }
 }
