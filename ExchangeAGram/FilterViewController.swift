@@ -132,6 +132,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         let photoAction = UIAlertAction(title: "Post Photo to Facebook with Caption", style: UIAlertActionStyle.Destructive) { (uiAlertAction) -> Void in
             self.saveFilterToCoreData(indexPath)
+            self.shareToFacebook(indexPath)
         }
         alert.addAction(photoAction)
         let saveFilterAction = UIAlertAction(title: "Save Filter without posting to Facebook", style: UIAlertActionStyle.Default) { (uiAlertAction) -> Void in
@@ -156,6 +157,20 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         self.navigationController?.popViewControllerAnimated(true)
 
+    }
+    
+    func shareToFacebook(indexPath: NSIndexPath) {
+        let filteredImage = self.filteredImage(fromImage: feedItem.image, filter: filters[indexPath.row])
+        let photos:NSArray = [filteredImage]
+        var params = FBPhotoParams()
+        params.photos = photos
+        FBDialogs.presentShareDialogWithPhotoParams(params, clientState: nil) { (call, result, error) -> Void in
+            if result != nil {
+                println(result)
+            } else {
+                println(error)
+            }
+        }
     }
     
     // caching functions
