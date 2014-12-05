@@ -125,19 +125,16 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             textField.placeholder = "Add Caption!"
             textField.secureTextEntry = false
         }
-        var text: String
         let textField = alert.textFields![0] as UITextField
-        if textField.text != nil {
-            text = textField.text
-        }
+
         let photoAction = UIAlertAction(title: "Post Photo to Facebook with Caption", style: UIAlertActionStyle.Destructive) { (uiAlertAction) -> Void in
             self.shareToFacebook(indexPath)
-            self.saveFilterToCoreData(indexPath)
+            self.saveFilterToCoreData(indexPath, caption: textField.text)
 
         }
         alert.addAction(photoAction)
         let saveFilterAction = UIAlertAction(title: "Save Filter without posting to Facebook", style: UIAlertActionStyle.Default) { (uiAlertAction) -> Void in
-            self.saveFilterToCoreData(indexPath)
+            self.saveFilterToCoreData(indexPath, caption: textField.text)
         }
         alert.addAction(saveFilterAction)
         let cancelAction = UIAlertAction(title: "Select another Filter", style: UIAlertActionStyle.Cancel) { (uiAlertAction) -> Void in
@@ -148,12 +145,13 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    func saveFilterToCoreData(indexPath: NSIndexPath) {
+    func saveFilterToCoreData(indexPath: NSIndexPath, caption: String) {
         let filteredImage = self.filteredImage(fromImage: feedItem.image, filter: filters[indexPath.row])
         let imageData = UIImageJPEGRepresentation(filteredImage, 1.0)
         self.feedItem.image = imageData
         let thumbNailData = UIImageJPEGRepresentation(filteredImage, 0.1)
         self.feedItem.thumbNail = thumbNailData
+        self.feedItem.caption = caption
         
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         self.navigationController?.popViewControllerAnimated(true)
