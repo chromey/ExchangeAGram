@@ -104,6 +104,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-m9-f20">
+                                <rect key="frame" x="10" y="220" width="140" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" red="0.60762745141983032" green="0.0019609018456827974" blue="0.080385681568840572" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Map View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mapViewButtonTapped:" destination="ApG-77-98t" eventType="touchUpInside" id="61N-zd-6i1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -111,11 +122,38 @@
                         <outlet property="fbLoginView" destination="EMj-8l-RiG" id="ujo-15-b5O"/>
                         <outlet property="nameLabel" destination="WPi-AP-rig" id="0Yb-hK-oxF"/>
                         <outlet property="profileImageView" destination="jkf-K0-NwZ" id="nIy-7U-gN7"/>
+                        <segue destination="cBp-sc-uZs" kind="show" identifier="mapSegue" id="w0I-mx-uQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcA-Oz-L2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="628" y="495"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="eUO-G1-rt9">
+            <objects>
+                <viewController id="cBp-sc-uZs" customClass="MapViewController" customModule="ExchangeAGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5d5-Iw-YuI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ee4-CF-FaA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OOl-Hu-5aT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VL3-Hx-On5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="VL3-Hx-On5" id="bjk-SZ-Faa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0KV-PE-adB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309" y="495"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h3X-hG-tc5">
