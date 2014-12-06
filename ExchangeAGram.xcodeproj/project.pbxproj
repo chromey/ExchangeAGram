@@ -20,7 +20,7 @@
 		83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CEAF3F1A27E56E00785281 /* FeedCell.swift */; };
 		83DB4C221A311EC800B22072 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83DB4C211A311EC800B22072 /* FacebookSDK.framework */; };
 		83DB4C241A326A2B00B22072 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB4C231A326A2B00B22072 /* MapViewController.swift */; };
-		83DB4C281A3274E000B22072 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB4C271A3274E000B22072 /* FeedItem.swift */; };
+		83DB4C2A1A333A9C00B22072 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB4C291A333A9C00B22072 /* FeedItem.swift */; };
 		83E43D0C1A2D31F300F784B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		83CEAF3F1A27E56E00785281 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		83DB4C211A311EC800B22072 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		83DB4C231A326A2B00B22072 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		83DB4C271A3274E000B22072 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		83DB4C291A333A9C00B22072 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
 		83E43D0B1A2D31F300F784B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +146,7 @@
 		83E43D0A1A2BAAD100F784B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				83DB4C271A3274E000B22072 /* FeedItem.swift */,
+				83DB4C291A333A9C00B22072 /* FeedItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 				83CEAF1B1A27DCFD00785281 /* AppDelegate.swift in Sources */,
 				83CEAF401A27E56E00785281 /* FeedCell.swift in Sources */,
 				83DB4C241A326A2B00B22072 /* MapViewController.swift in Sources */,
-				83DB4C281A3274E000B22072 /* FeedItem.swift in Sources */,
+				83DB4C2A1A333A9C00B22072 /* FeedItem.swift in Sources */,
 				83CEAF3E1A27E1BB00785281 /* FeedViewController.swift in Sources */,
 				83E43D0C1A2D31F300F784B3 /* ProfileViewController.swift in Sources */,
 				83CEAF1E1A27DCFD00785281 /* ExchangeAGram.xcdatamodeld in Sources */,
