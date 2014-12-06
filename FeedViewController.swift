@@ -119,6 +119,9 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedItem.latitude = locationManager.location.coordinate.latitude
         feedItem.longitude = locationManager.location.coordinate.longitude
         
+        let uuid = NSUUID().UUIDString
+        feedItem.uniqueId = uuid
+        
         appDelegate.saveContext()
         feedArray.append(feedItem)
     
