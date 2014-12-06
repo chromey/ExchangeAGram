@@ -23,6 +23,17 @@ class MapViewController: UIViewController {
         var error: NSError?
         let itemArray = appDelegate.managedObjectContext?.executeFetchRequest(request, error: &error)
         
+        for item in itemArray! {
+            let location = CLLocationCoordinate2D(latitude: Double(item.latitude), longitude: Double(item.longitude))
+            let span = MKCoordinateSpanMake(10.0, 10.0)
+            let region = MKCoordinateRegionMake(location, span)
+            mapView.setRegion(region, animated: true)
+            let annotation = MKPointAnnotation()
+            annotation.setCoordinate(location)
+            annotation.title = item.caption
+	            mapView.addAnnotation(annotation)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
