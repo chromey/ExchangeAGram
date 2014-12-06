@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController {
 
@@ -17,18 +18,11 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let request = NSFetchRequest(entityName: "FeedItem")
+        let appDelegate = (UIApplication.sharedApplication().delegate) as AppDelegate
+        var error: NSError?
+        let itemArray = appDelegate.managedObjectContext?.executeFetchRequest(request, error: &error)
         
-        let location = CLLocationCoordinate2D(latitude: 48.868639224587, longitude: 2.37119161036255)
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegionMake(location, span)
-        mapView.setRegion(region, animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.setCoordinate(location)
-        annotation.title = "YOU ROCK!"
-        annotation.subtitle = "cipo"
-        
-        mapView.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {
