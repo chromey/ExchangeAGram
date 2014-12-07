@@ -87,6 +87,11 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         var cell = collectionView.dequeueReusableCellWithReuseIdentifier("feedCell", forIndexPath: indexPath) as FeedCell
         if indexPath.section == 0 {
             let feedItem = feedArray[indexPath.item] as FeedItem
+            if feedItem.filtered == true {
+                let returnedImage = UIImage(data: feedItem.image)
+                let image = UIImage(CGImage: returnedImage?.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)
+                cell.imageView.image = image
+            }
             cell.imageView.image = UIImage(data: feedItem.image)
             cell.captionLabel.text = feedItem.caption
         }
@@ -121,6 +126,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         let uuid = NSUUID().UUIDString
         feedItem.uniqueId = uuid
+        feedItem.filtered = false
         
         appDelegate.saveContext()
         feedArray.append(feedItem)
