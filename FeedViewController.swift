@@ -35,6 +35,8 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         locationManager.distanceFilter = 100.0
         locationManager.startUpdatingLocation()
+        let bgImage = UIImage(named: "AutumnBackground")!
+        self.view.backgroundColor = UIColor(patternImage: bgImage)
         
     }
     
