@@ -175,7 +175,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     // caching functions
     
     func cacheImage(imageNumber: Int) {
-        let uniquePath = tmp.stringByAppendingPathComponent("\(imageNumber)")
+        let uniquePath = tmp.stringByAppendingPathComponent("\(feedItem.uniqueId)\(imageNumber)")
         
         let image = filteredImage(fromImage: self.feedItem.thumbNail, filter: self.filters[imageNumber])
         UIImageJPEGRepresentation(image, 1.0).writeToFile(uniquePath, atomically: true)
@@ -183,7 +183,7 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func getCachedImage(imageNumber: Int) -> UIImage {
-        let uniquePath = tmp.stringByAppendingPathComponent("\(imageNumber)")
+        let uniquePath = tmp.stringByAppendingPathComponent("\(feedItem.uniqueId)\(imageNumber)")
         var image: UIImage
         
         if !NSFileManager.defaultManager().fileExistsAtPath(uniquePath) {
